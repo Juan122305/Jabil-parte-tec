@@ -1,0 +1,42 @@
+<h2>Películas</h2>
+
+<form (ngSubmit)="submit()">
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="form.name" name="name" required>
+
+  <label>Género</label>
+  <input type="text" [(ngModel)]="form.gender" name="gender">
+
+  <label>Duración (HH:mm:ss)</label>
+  <input type="text" placeholder="02:28:00" [(ngModel)]="form.duration" name="duration">
+
+  <label>Director</label>
+  <select [(ngModel)]="form.fkDirector" name="fkDirector" required>
+    <option [ngValue]="undefined" disabled>Selecciona un director</option>
+    <option *ngFor="let d of directors()" [ngValue]="d.pkDirector">{{ d.name }}</option>
+  </select>
+
+  <button type="submit">{{ editing ? 'Actualizar' : 'Crear' }}</button>
+  <button type="button" *ngIf="editing" (click)="cancelEdit()">Cancelar</button>
+</form>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th><th>Nombre</th><th>Género</th><th>Duración</th><th>Director</th><th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of movies()">
+      <td>{{ m.pkMovies }}</td>
+      <td>{{ m.name }}</td>
+      <td>{{ m.gender }}</td>
+      <td>{{ m.duration }}</td>
+      <td>{{ m.directorName }}</td>
+      <td>
+        <button (click)="edit(m)">Editar</button>
+        <button (click)="remove(m.pkMovies)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

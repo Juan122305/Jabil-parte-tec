@@ -1,0 +1,37 @@
+<h2>Directores</h2>
+
+<form (ngSubmit)="submit()">
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="form.name" name="name" required>
+
+  <label>Edad</label>
+  <input type="number" [(ngModel)]="form.age" name="age">
+
+  <label>
+    <input type="checkbox" [(ngModel)]="form.active" name="active">
+    Activo
+  </label>
+
+  <button type="submit">{{ editing ? 'Actualizar' : 'Crear' }}</button>
+  <button type="button" *ngIf="editing" (click)="cancelEdit()">Cancelar</button>
+</form>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th><th>Nombre</th><th>Edad</th><th>Activo</th><th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of directors()">
+      <td>{{ d.pkDirector }}</td>
+      <td>{{ d.name }}</td>
+      <td>{{ d.age }}</td>
+      <td>{{ d.active ? 'Si' : 'No' }}</td>
+      <td>
+        <button (click)="edit(d)">Editar</button>
+        <button (click)="remove(d.pkDirector)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

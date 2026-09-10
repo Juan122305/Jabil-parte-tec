@@ -140,3 +140,4 @@ C:\Users\Torre\OneDrive\Documentos\Jabil\Jabil-parte-tec\Backend\Crud\obj\Debug\
 C:\Users\Torre\OneDrive\Documentos\Jabil\Jabil-parte-tec\Backend\Crud\obj\Debug\net8.0\Crud.pdb
 C:\Users\Torre\OneDrive\Documentos\Jabil\Jabil-parte-tec\Backend\Crud\obj\Debug\net8.0\Crud.genruntimeconfig.cache
 C:\Users\Torre\OneDrive\Documentos\Jabil\Jabil-parte-tec\Backend\Crud\obj\Debug\net8.0\ref\Crud.dll
+C:\Users\Torre\OneDrive\Documentos\Jabil\Jabil-parte-tec\Backend\Crud\obj\Debug\net8.0\Crud.sourcelink.json
