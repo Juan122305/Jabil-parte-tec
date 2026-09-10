@@ -72,5 +72,4 @@ Deberías ver el menú (Películas / Directores), con las tablas cargadas y la p
 Notas y solución de problemas:
 
 ng no se reconoce como comando: reinicia la terminal después de instalar Angular CLI (npm install -g @angular/cli), o agrega manualmente %AppData%\npm a la variable de entorno PATH.
-La tabla no se llena aunque la API responda 200 OK: Angular 21 usa detección de cambios zoneless por default. Las listas que se llenan desde una suscripción async deben ser signal<T[]>([]) (no propiedades normales), y en el HTML se leen como lista() en vez de lista.
 npm install falla en carpetas sincronizadas con OneDrive: si ves errores intermitentes al instalar, considera pausar temporalmente la sincronización de OneDrive durante la instalación.
